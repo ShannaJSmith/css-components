@@ -1,4 +1,3 @@
-import './App.css';
 import DarkModeButton from './components/DarkModeButton';
 
 function App() {

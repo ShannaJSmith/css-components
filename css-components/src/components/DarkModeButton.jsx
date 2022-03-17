@@ -1,6 +1,7 @@
 import { BsMoonStarsFill, BsFillSunFill } from 'react-icons/bs';
 import './DarkModeButton.css';
-export const DarkModeButton = () => {
+
+const DarkModeButton = () => {
   return (
     <div>
       <input type="checkbox" className="checkbox" id="check" />
@@ -12,3 +13,5 @@ export const DarkModeButton = () => {
     </div>
   );
 };
+
+export default DarkModeButton;
