@@ -1,10 +1,10 @@
 .checkbox {
   position: absolute;
-  opacity: 10;
 }
 
 .label {
-  background-image: linear-gradient(black, grey);
+  background-image: linear-gradient(black, white);
+  border: grey solid 1px;
   border-radius: 50px;
   cursor: pointer;
   position: relative;
@@ -18,7 +18,8 @@
 }
 
 .label .ball {
-  background-color: grey;
+  background: grey;
+  /* border: grey solid 1px; */
   border-radius: 50%;
   position: absolute;
   top: 2px;

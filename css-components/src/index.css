@@ -7,3 +7,7 @@ If you set box-sizing: border-box; on an element, padding and border are include
 body {
   margin: 0;
 }
+
+.App {
+  display: flex;
+}
