@@ -1,5 +1,6 @@
 .checkbox {
   position: absolute;
+  display: none;
 }
 
 .label {

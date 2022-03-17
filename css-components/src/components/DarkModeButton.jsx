@@ -3,7 +3,7 @@ import './DarkModeButton.css';
 
 const DarkModeButton = () => {
   return (
-    <div>
+    <div className="toggle-btn">
       <input type="checkbox" className="checkbox" id="check" />
       <label className="label" for="check">
         <BsMoonStarsFill style={{ color: 'yellow', fontSize: 'small' }} />
