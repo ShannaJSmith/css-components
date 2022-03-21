@@ -39,6 +39,8 @@
 
 .panel.active h3 {
   opacity: 1;
+  /* delay h3 appearing so it looks smoother */
+  transition: opacity 0.3s ease-in 0.4s;
 }
 
 /* on small screens we see 2 panels */
