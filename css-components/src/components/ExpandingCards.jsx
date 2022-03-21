@@ -1,8 +1,6 @@
 import './ExpandingCards.css';
 import { panelData } from '../panelData';
 
-// console.log('data:', panelData);
-
 const ExpandingCards = () => {
   const panels = document.querySelectorAll('.panel');
 
@@ -24,7 +22,7 @@ const ExpandingCards = () => {
       {panelData.map((panel) => (
         <div
           key={panel.id}
-          className="panel active"
+          className={`panel ${panel.status}`}
           style={{
             backgroundImage: `url(${panel.image})`,
           }}

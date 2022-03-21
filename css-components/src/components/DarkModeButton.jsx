@@ -5,7 +5,7 @@ const DarkModeButton = () => {
   return (
     <div className="toggle-btn">
       <input type="checkbox" className="checkbox" id="check" />
-      <label className="label" for="check">
+      <label className="label" htmlFor="check">
         <BsMoonStarsFill style={{ color: 'yellow', fontSize: 'small' }} />
         <BsFillSunFill style={{ color: 'orange', fontSize: 'small' }} />
         <div className="ball"></div>
