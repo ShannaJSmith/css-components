@@ -7,13 +7,19 @@ const TableOfContents = () => {
     <div className="TOC">
       <h1>Table of Contents </h1>
       <Link to="/background1">
-        <Button variant="primary">Background 1</Button>
+        <Button variant="primary" className="col-7">
+          Background 1
+        </Button>
       </Link>
       <Link to="/background2">
-        <Button variant="info">Background 2</Button>
+        <Button variant="info" className="col-7">
+          Background 2
+        </Button>
       </Link>
       <Link to="/cards">
-        <Button variant="dark">Expanding Cards</Button>
+        <Button variant="dark" className="col-7">
+          Expanding Cards
+        </Button>
       </Link>
     </div>
   );
