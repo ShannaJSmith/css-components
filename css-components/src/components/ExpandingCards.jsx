@@ -1,4 +1,7 @@
 import './ExpandingCards.css';
+import { panelData } from '../panelData';
+
+console.log('data:', panelData);
 
 const ExpandingCards = () => {
   const panels = document.querySelectorAll('.panel');
