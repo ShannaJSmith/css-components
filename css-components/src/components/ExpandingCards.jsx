@@ -2,11 +2,19 @@ import './ExpandingCards.css';
 
 const ExpandingCards = () => {
   const panels = document.querySelectorAll('.panel');
+
   panels.forEach((panel) => {
     panel.addEventListener('click', () => {
+      removeActiveClasses();
       panel.classList.add('active');
     });
   });
+
+  const removeActiveClasses = () => {
+    panels.forEach((panel) => {
+      panel.classList.remove('active');
+    });
+  };
   return (
     <div className="container">
       <div
