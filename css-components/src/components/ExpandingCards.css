@@ -1,3 +1,23 @@
 .container {
+  display: flex;
   color: #fff;
+  width: 90vw;
+  justify-content: center;
+}
+
+.panel {
+  /* make full image visible */
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vh;
+  border-radius: 60px;
+  cursor: pointer;
+  /* set initial width, will change on active later */
+  flex: 0.5;
+  margin: 5px;
+  /* h3 elements will be absolute*/
+  position: relative;
+  /* set ease in effect transition on flex property for when it's active later */
+  transition: flex 0.6s ease-in;
 }
