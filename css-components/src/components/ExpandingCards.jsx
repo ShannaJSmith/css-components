@@ -2,10 +2,8 @@ import './ExpandingCards.css';
 
 const ExpandingCards = () => {
   const panels = document.querySelectorAll('.panel');
-  // console.log('panels:', panels[4]);
   panels.forEach((panel) => {
     panel.addEventListener('click', () => {
-      // console.log('you clicked');
       panel.classList.add('active');
     });
   });
