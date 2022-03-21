@@ -12,6 +12,9 @@ const TableOfContents = () => {
       <Link to="/background2">
         <Button variant="info">Background 2</Button>
       </Link>
+      <Link to="/cards">
+        <Button variant="dark">Expanding Cards</Button>
+      </Link>
     </div>
   );
 };
