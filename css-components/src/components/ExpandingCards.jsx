@@ -15,6 +15,7 @@ const ExpandingCards = () => {
       panel.classList.remove('active');
     });
   };
+
   return (
     <div className="container">
       <div
