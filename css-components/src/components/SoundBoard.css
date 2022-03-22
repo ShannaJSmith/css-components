@@ -1,0 +1,18 @@
+#buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sound-btn {
+  background: rgb(68, 216, 167);
+  border-radius: 5px;
+  border: none;
+  color: white;
+  padding: 1.5rem 3rem;
+  cursor: pointer;
+}
+
+.sound-btn:hover {
+  opacity: 0.9;
+  background-color: rgb(57, 109, 207);
+}

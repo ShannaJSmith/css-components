@@ -5,10 +5,12 @@ import SoundBoard from '../components/SoundBoard';
 const BGM = () => {
   return (
     <div>
-      <SoundBoard />
       <Link to="/">
-        <Button variant="success">Home</Button>
+        <Button variant="success" style={{ marginBottom: '50px' }}>
+          Home
+        </Button>
       </Link>
+      <SoundBoard />
     </div>
   );
 };

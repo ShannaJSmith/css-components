@@ -1,10 +1,12 @@
+import './SoundBoard.css';
+
 const sounds = ['Tori no Uta', 'TGCF OST', 'tada'];
 
 const SoundBoard = () => {
   window.onload = () => {
     sounds.forEach((sound) => {
       const btn = document.createElement('button');
-      btn.classList.add('btn');
+      btn.classList.add('sound-btn');
 
       btn.innerText = sound;
 
@@ -12,7 +14,7 @@ const SoundBoard = () => {
     });
   };
   return (
-    <div>
+    <div className="soundboard">
       <audio id="tori-no-uta" scr="sounds/Tori-no-Uta.mp3"></audio>
       <audio id="TGCF" scr="sounds/TGCF-OST.mp3"></audio>
       <audio id="tada" scr="sounds/tada.mp3"></audio>
