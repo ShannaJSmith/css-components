@@ -2,6 +2,7 @@ import './Background1.css';
 import DarkModeButton from '../components/DarkModeButton';
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
+import HiddenSearchForm from '../components/HiddenSearchForm';
 
 const Background1 = () => {
   return (
@@ -9,6 +10,7 @@ const Background1 = () => {
       <Link to="/">
         <Button variant="primary">Home</Button>
       </Link>
+      <HiddenSearchForm />
       <DarkModeButton />
     </div>
   );
