@@ -7,8 +7,14 @@ const HiddenSearchForm = () => {
   const [active, setActive] = useState('');
 
   const handleClick = () => {
-    setActive('active');
+    if (active === '') {
+      setActive('active');
+    } else {
+      // set this condition so it can be hidden on second click
+      setActive('');
+    }
   };
+
   return (
     <div className={`search ${active}`}>
       <input type="text" className="input" placeholder="Search..." />
