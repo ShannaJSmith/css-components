@@ -18,7 +18,7 @@ const HiddenSearchForm = () => {
   return (
     <div className={`search ${active}`}>
       <input type="text" className="input" placeholder="Search..." />
-      <Button variant="dark" className="search-btn" onClick={handleClick}>
+      <Button variant="dark" className="search-" onClick={handleClick}>
         <BsSearch />
       </Button>
     </div>
