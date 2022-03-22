@@ -1,15 +1,18 @@
 import './HiddenSearchForm.css';
 import { BsSearch } from 'react-icons/bs';
 import { Button } from 'react-bootstrap';
+import { useState } from 'react';
 
 const HiddenSearchForm = () => {
-  const search = document.querySelector('.search');
-  const btn = document.querySelector('.search-btn');
-  const input = document.querySelector('.input');
+  const [active, setActive] = useState('');
+
+  const handleClick = () => {
+    setActive('active');
+  };
   return (
-    <div className="search">
+    <div className={`search ${active}`}>
       <input type="text" className="input" placeholder="Search..." />
-      <Button variant="dark" className="search-btn">
+      <Button variant="dark" className="search-btn" onClick={handleClick}>
         <BsSearch />
       </Button>
     </div>
