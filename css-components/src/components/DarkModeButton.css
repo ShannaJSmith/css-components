@@ -13,7 +13,7 @@
   width: 50px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   padding: 12px;
   /* transform: scale(1.5); */
 }
@@ -33,4 +33,10 @@
 
 .checkbox:checked + .label .ball {
   transform: translateX(24px);
+}
+
+.label .sun-moon {
+  display: flex;
+  gap: 10px;
+  margin-left: -5px;
 }
