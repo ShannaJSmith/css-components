@@ -21,6 +21,11 @@ const TableOfContents = () => {
           Expanding Cards
         </Button>
       </Link>
+      <Link to="/bgm">
+        <Button variant="light" className="col-7">
+          Background Music
+        </Button>
+      </Link>
     </div>
   );
 };
