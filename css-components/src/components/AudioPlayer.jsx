@@ -6,7 +6,7 @@ const AudioPlayer = ({ tracks }) => {
   const [trackProgress, setTrackProgress] = useState(0);
   const [playing, setPlaying] = useState(false);
 
-  const { src, label } = tracks[trackIndex];
+  const { src, label, anime, artwork } = tracks[trackIndex];
 
   const audioRef = useRef(new Audio(src));
   const intervalRef = useRef();
@@ -24,15 +24,17 @@ const AudioPlayer = ({ tracks }) => {
 
   return (
     <div className="audio-player" style={{ marginTop: '100px' }}>
-      <div className="track-info">
-        {/* <img
-          className="artwork"
-          src={image}
-          alt={`track artwork for ${title} by ${artist}`}
-        /> */}
-        <h2 className="title">{label}</h2>
-        {/* <h3 className="artist">{artist}</h3> */}
-      </div>
+      {tracks.map((track, index) => (
+        <div className="track-info" key={index}>
+          <img
+            className="artwork"
+            src={track.artwork}
+            alt={`track artwork for ${track.label} from ${track.anime}`}
+          />
+          <h2 className="title">{track.label}</h2>
+          <h3 className="anime">{track.anime}</h3>
+        </div>
+      ))}
     </div>
   );
 };

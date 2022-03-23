@@ -4,12 +4,20 @@ import SoundBoard from '../components/SoundBoard';
 import AudioPlayer from '../components/AudioPlayer';
 import toriNoUta from '../sounds/Tori-no-Uta.mp3';
 import TGCF from '../sounds/TGCF-OST.mp3';
-import tada from '../sounds/tada.mp3';
 
 const tracks = [
-  { src: toriNoUta, label: 'Tori no Uta' },
-  { src: TGCF, label: 'TGCF OST' },
-  { src: tada, label: 'tada' },
+  {
+    src: toriNoUta,
+    label: 'Tori no Uta',
+    artwork: 'artwork/air.jpeg',
+    anime: 'Air TV',
+  },
+  {
+    src: TGCF,
+    label: 'TGCF OST',
+    artwork: 'artwork/heaven.jpeg',
+    anime: 'Heaven Officials Blessings',
+  },
 ];
 
 const BGM = () => {
