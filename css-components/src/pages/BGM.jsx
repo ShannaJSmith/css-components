@@ -7,8 +7,8 @@ import TGCF from '../sounds/TGCF-OST.mp3';
 import tada from '../sounds/tada.mp3';
 
 const tracks = [
-  { src: toriNoUta, label: 'tori-no-uta' },
-  { src: TGCF, label: 'TGCF' },
+  { src: toriNoUta, label: 'Tori no Uta' },
+  { src: TGCF, label: 'TGCF OST' },
   { src: tada, label: 'tada' },
 ];
 
