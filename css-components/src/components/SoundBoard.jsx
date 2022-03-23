@@ -6,42 +6,11 @@ import tada from '../sounds/tada.mp3';
 const sounds = ['tori-no-uta', 'TGCF', 'tada'];
 
 const SoundBoard = () => {
-  window.onload = () => {
-    sounds.forEach((sound) => {
-      const btn = document.createElement('button');
-      btn.classList.add('sound-btn');
-
-      btn.innerText = sound;
-
-      btn.addEventListener('click', () => {
-        stopMusic();
-
-        document.getElementById(sound).play();
-      });
-
-      document.getElementById('buttons').appendChild(btn);
-    });
-
-    const stopMusic = () => {
-      sounds.forEach((sound) => {
-        const bgm = document.getElementById(sound);
-
-        bgm.pause();
-        // reset current time to 0
-        bgm.currentTime = 0;
-      });
-    };
-  };
-
   return (
     <div className="soundboard">
       <audio id="tori-no-uta" src={toriNoUta}></audio>
       <audio id="TGCF" src={TGCF}></audio>
-
-      {/* another format it can be written in: */}
-      <audio id="tada">
-        <source src={tada}></source>
-      </audio>
+      <audio id="tada" src={tada}></audio>
 
       <div id="buttons"></div>
     </div>
