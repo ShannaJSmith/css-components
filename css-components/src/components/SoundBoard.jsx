@@ -14,6 +14,8 @@ const sounds = [
 const SoundBoard = () => {
   const [playSound] = useSound(toriNoUta, {
     interrupt: true,
+    // controlls the speed of song. Values range from 0.5(slow) - 4(fast)
+    playbackRate: 0.5,
   });
   return (
     <div>
