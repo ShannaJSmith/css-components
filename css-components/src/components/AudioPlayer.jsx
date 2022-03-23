@@ -24,17 +24,15 @@ const AudioPlayer = ({ tracks }) => {
 
   return (
     <div className="audio-player" style={{ marginTop: '100px' }}>
-      {tracks.map((track, index) => (
-        <div className="track-info" key={index}>
-          <img
-            className="artwork"
-            src={track.artwork}
-            alt={`track artwork for ${track.label} from ${track.anime}`}
-          />
-          <h2 className="title">{track.label}</h2>
-          <h3 className="anime">{track.anime}</h3>
-        </div>
-      ))}
+      <div className="track-info">
+        <img
+          className="artwork"
+          src={artwork}
+          alt={`track artwork for ${label} from ${anime}`}
+        />
+        <h2 className="title">{label}</h2>
+        <h3 className="anime">{anime}</h3>
+      </div>
     </div>
   );
 };
