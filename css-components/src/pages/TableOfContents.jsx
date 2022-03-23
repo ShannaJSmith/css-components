@@ -26,6 +26,11 @@ const TableOfContents = () => {
           Background Music
         </Button>
       </Link>
+      <Link to="/faq">
+        <Button variant="danger" className="col-7">
+          FAQ Collapse
+        </Button>
+      </Link>
     </div>
   );
 };

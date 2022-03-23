@@ -27,6 +27,7 @@ const SoundBoard = () => {
         const bgm = document.getElementById(sound);
 
         bgm.pause();
+        // reset current time to 0
         bgm.currentTime = 0;
       });
     };
