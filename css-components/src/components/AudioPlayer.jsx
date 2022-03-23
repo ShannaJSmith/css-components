@@ -1,19 +1,19 @@
 import './AudioPlayer.css';
-import toriNoUta from '../sounds/Tori-no-Uta.mp3';
-import TGCF from '../sounds/TGCF-OST.mp3';
-import tada from '../sounds/tada.mp3';
 import { useState, useEffect, useRef } from 'react';
 
-const tracks = [
-  { src: toriNoUta, label: 'tori-no-uta' },
-  { src: TGCF, label: 'TGCF' },
-  { src: tada, label: 'tada' },
-];
-
-const AudioPlayer = () => {
+const AudioPlayer = ({ tracks }) => {
   const [trackIndex, setTrackIndex] = useState(0);
   const [trackProgress, setTrackProgress] = useState(0);
   const [playing, setPlaying] = useState(false);
+
+  const { src, label } = tracks[trackIndex];
+
+  const audioRef = useRef(new Audio(src));
+  const intervalRef = useRef();
+  const isReady = useRef(false);
+
+  const { duration } = audioRef.current;
+
   return (
     <div style={{ marginTop: '100px' }}>
       <div>Play</div>
