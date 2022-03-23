@@ -1,7 +1,7 @@
 import './SoundBoard.css';
 import toriNoUta from '../sounds/Tori-no-Uta.mp3';
 import TGCF from '../sounds/TGCF-OST.mp3';
-// import tada from '../sounds/tada.mp3';
+import tada from '../sounds/tada.mp3';
 
 const sounds = ['tori-no-uta', 'TGCF', 'tada'];
 
@@ -14,21 +14,33 @@ const SoundBoard = () => {
       btn.innerText = sound;
 
       btn.addEventListener('click', () => {
+        stopMusic();
+
         document.getElementById(sound).play();
       });
 
       document.getElementById('buttons').appendChild(btn);
     });
+
+    const stopMusic = () => {
+      sounds.forEach((sound) => {
+        const bgm = document.getElementById(sound);
+
+        bgm.pause();
+        bgm.currentTime = 0;
+      });
+    };
   };
+
   return (
     <div className="soundboard">
       <audio id="tori-no-uta" src={toriNoUta}></audio>
       <audio id="TGCF" src={TGCF}></audio>
-      {/* another format it can be written in
-      
+
+      {/* another format it can be written in: */}
       <audio id="tada">
         <source src={tada}></source>
-      </audio> */}
+      </audio>
 
       <div id="buttons"></div>
     </div>
