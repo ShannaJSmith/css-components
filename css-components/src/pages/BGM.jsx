@@ -9,13 +9,14 @@ const tracks = [
   {
     src: toriNoUta,
     label: 'Tori no Uta',
-    artwork: 'artwork/air.jpeg',
+    artwork:
+      'https://i1.sndcdn.com/artworks-sgsOfsCte8szViiA-7QmSvw-t500x500.jpg',
     anime: 'Air TV',
   },
   {
     src: TGCF,
     label: 'TGCF OST',
-    artwork: 'artwork/heaven.jpeg',
+    artwork: 'https://i1.sndcdn.com/artworks-000139595820-8gx48z-t500x500.jpg',
     anime: 'Heaven Officials Blessings',
   },
 ];
