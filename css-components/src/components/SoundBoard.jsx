@@ -12,7 +12,7 @@ import useSound from 'use-sound';
 // ];
 
 const SoundBoard = () => {
-  const [playSound] = useSound(toriNoUta, {
+  const [playTori] = useSound(toriNoUta, {
     interrupt: true,
     // controlls the speed of song. Values range from 0.5(slow) - 4(fast)
     playbackRate: 0.5,
@@ -23,28 +23,26 @@ const SoundBoard = () => {
       three: [6000, 8000],
     },
   });
+
+  const [playOST] = useSound(TGCF, {
+    interrupt: true,
+    // sprite: {
+    //   one: [0, 2000],
+    //   two: [2000, 6000],
+    //   three: [6000, 8000],
+    // },
+  });
   return (
     <div>
       <div
         id="buttons"
         className="sound-btn"
-        onClick={() => playSound({ id: 'one' })}
+        onClick={() => playTori({ id: 'one' })}
       >
         one
       </div>
-      <div
-        id="buttons"
-        className="sound-btn"
-        onClick={() => playSound({ id: 'two' })}
-      >
-        two
-      </div>
-      <div
-        id="buttons"
-        className="sound-btn"
-        onClick={() => playSound({ id: 'three' })}
-      >
-        three
+      <div id="buttons" className="sound-btn" onClick={playOST}>
+        OST
       </div>
     </div>
   );
