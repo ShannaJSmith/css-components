@@ -30,8 +30,8 @@ const AudioPlayer = ({ tracks }) => {
           src={artwork}
           alt={`track artwork for ${label} from ${anime}`}
         />
-        <h2 className="title">{label}</h2>
-        <h3 className="anime">{anime}</h3>
+        <h3 className="title">{label}</h3>
+        <h4 className="anime">{anime}</h4>
       </div>
     </div>
   );
