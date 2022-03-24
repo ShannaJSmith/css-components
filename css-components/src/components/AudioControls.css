@@ -3,17 +3,25 @@
   background: none;
   cursor: pointer;
   color: white;
-  font-size: 24px;
 }
 
 .audio-controls > button:hover {
   color: #bada55;
 }
 
-.audio-controls .play {
-  font-size: 50px;
+.audio-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  margin: 0 auto 15px;
 }
 
+.audio-controls .prev,
+.audio-controls .next {
+  font-size: 24px;
+}
+
+.audio-controls .play,
 .audio-controls .pause {
   font-size: 50px;
 }
