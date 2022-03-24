@@ -64,6 +64,8 @@ const AudioPlayer = ({ tracks }) => {
     }
   }, [trackIndex]);
 
+  // TODO add playback progress bar and scrubbing
+
   return (
     <div className="audio-player" style={{ marginTop: '100px' }}>
       <div className="track-info">
