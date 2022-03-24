@@ -31,6 +31,14 @@ const AudioPlayer = ({ tracks }) => {
     }
   };
 
+  useEffect(() => {
+    if (playing) {
+      audioRef.current.play();
+    } else {
+      audioRef.current.pause();
+    }
+  }, [playing]);
+
   return (
     <div className="audio-player" style={{ marginTop: '100px' }}>
       <div className="track-info">
