@@ -3,7 +3,7 @@ import './AudioControls.css';
 import { BsSkipBackward, BsSkipForward, BsPlay, BsPause } from 'react-icons/bs';
 
 const AudioControls = ({
-  isPlaying,
+  playing,
   onPlayPauseClick,
   onPrevClick,
   onNextClick,
@@ -18,7 +18,7 @@ const AudioControls = ({
       >
         <BsSkipBackward />
       </button>
-      {isPlaying ? (
+      {playing ? (
         <button
           type="button"
           className="pause"
