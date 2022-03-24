@@ -25,7 +25,7 @@ const SoundBoard = () => {
     // },
   });
   return (
-    <div>
+    <div className="soundboard">
       <div
         id="buttons"
         className="sound-btn"
