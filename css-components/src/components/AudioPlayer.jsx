@@ -39,6 +39,31 @@ const AudioPlayer = ({ tracks }) => {
     }
   }, [playing]);
 
+  useEffect(() => {
+    // Pause and clean up
+    return () => {
+      audioRef.current.pause();
+      clearInterval(intervalRef.current);
+    };
+  }, []);
+
+  // Handle setup when changing tracks
+  useEffect(() => {
+    audioRef.current.pause();
+
+    audioRef.current = new Audio(src);
+    setTrackProgress(audioRef.current.currentTime);
+
+    if (isReady.current) {
+      audioRef.current.play();
+      setPlaying(true);
+      // startTimer();
+    } else {
+      // Set the isReady ref as true for the next pass
+      isReady.current = true;
+    }
+  }, [trackIndex]);
+
   return (
     <div className="audio-player" style={{ marginTop: '100px' }}>
       <div className="track-info">
