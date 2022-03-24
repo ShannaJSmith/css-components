@@ -1,0 +1,21 @@
+.faq-container {
+  max-width: 600px;
+  text-align: left;
+  color: black;
+}
+
+.faq {
+  background-color: transparent;
+  border: 1px solid #9fa4a8;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 30px;
+  position: relative;
+  overflow: hidden; /* so nothing spills out of container */
+  transition: 0.3s ease; /* smooth transtion on expand and collapse */
+}
+
+.faq.active {
+  background-color: rgba(196, 188, 188, 0.884);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 3px 6px rgba(0, 0, 0, 0.1);
+}

@@ -4,12 +4,25 @@ import { RiCloseFill } from 'react-icons/ri';
 
 const FAQCollapse = () => {
   return (
-    <div>
+    <>
       <h1>Frequently Asked Questions</h1>
       <div className="faq-container">
         <div className="faq active">
           <h3 className="faq-question">What's your favourite anime?</h3>
-          <p className="faq-answer">Inuyasha of course!</p>
+          <p className="faq-answer">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam
+            exercitationem ut culpa nesciunt nihil est quaerat repellat
+            veritatis ullam illo, tenetur labore! Unde nihil magnam animi totam
+            similique rerum veniam cumque consequatur! In animi voluptates
+            temporibus praesentium ut magnam, quaerat aspernatur alias natus
+            veritatis tenetur ipsam dolor nemo laudantium ad atque cumque
+            dolorum fugiat voluptatum odio, enim dolorem saepe commodi
+            consequuntur? Reprehenderit commodi ab soluta consectetur. Voluptas
+            nam atque veritatis porro possimus delectus, expedita iusto eaque?
+            Necessitatibus dolor, ipsa iure, saepe nobis eveniet accusamus hic
+            veritatis ad minus dicta repellendus nihil? Quo voluptates
+            voluptatibus iusto nobis quia maiores quos aspernatur!
+          </p>
           <button className="faq-toggle">
             <BsChevronDown />
             <RiCloseFill />
@@ -52,7 +65,7 @@ const FAQCollapse = () => {
           </button>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
