@@ -1,4 +1,5 @@
 import './AudioPlayer.css';
+import AudioControls from './AudioControls';
 import { useState, useEffect, useRef } from 'react';
 
 const AudioPlayer = ({ tracks }) => {
@@ -32,6 +33,12 @@ const AudioPlayer = ({ tracks }) => {
         />
         <h3 className="title">{label}</h3>
         <h4 className="anime">{anime}</h4>
+        <AudioControls
+          isPlaying={playing}
+          onPrevClick={toPrevTrack}
+          onNextClick={toNextTrack}
+          onPlayPauseClick={setPlaying}
+        />
       </div>
     </div>
   );
