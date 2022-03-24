@@ -16,3 +16,8 @@
   opacity: 0.9;
   background-color: rgb(57, 109, 207);
 }
+
+.soundboard {
+  display: flex;
+  justify-content: center;
+}

@@ -1,4 +1,5 @@
 import './AudioPlayer.css';
+import AudioControls from './AudioControls';
 import { useState, useEffect, useRef } from 'react';
 
 const AudioPlayer = ({ tracks }) => {
@@ -15,12 +16,55 @@ const AudioPlayer = ({ tracks }) => {
   const { duration } = audioRef.current;
 
   const toPrevTrack = () => {
-    console.log('go to prev');
+    if (trackIndex - 1 < 0) {
+      setTrackIndex(tracks.length - 1);
+    } else {
+      setTrackIndex(trackIndex - 1);
+    }
   };
 
   const toNextTrack = () => {
-    console.log('go to next');
+    if (trackIndex < tracks.length - 1) {
+      setTrackIndex(trackIndex + 1);
+    } else {
+      setTrackIndex(0);
+    }
   };
+
+  useEffect(() => {
+    if (playing) {
+      audioRef.current.play();
+    } else {
+      audioRef.current.pause();
+    }
+  }, [playing]);
+
+  useEffect(() => {
+    // Pause and clean up
+    return () => {
+      audioRef.current.pause();
+      clearInterval(intervalRef.current);
+    };
+  }, []);
+
+  // Handle setup when changing tracks
+  useEffect(() => {
+    audioRef.current.pause();
+
+    audioRef.current = new Audio(src);
+    setTrackProgress(audioRef.current.currentTime);
+
+    if (isReady.current) {
+      audioRef.current.play();
+      setPlaying(true);
+      // startTimer();
+    } else {
+      // Set the isReady ref as true for the next pass
+      isReady.current = true;
+    }
+  }, [trackIndex]);
+
+  // TODO add playback progress bar and scrubbing
 
   return (
     <div className="audio-player" style={{ marginTop: '100px' }}>
@@ -32,6 +76,12 @@ const AudioPlayer = ({ tracks }) => {
         />
         <h3 className="title">{label}</h3>
         <h4 className="anime">{anime}</h4>
+        <AudioControls
+          playing={playing}
+          onPrevClick={toPrevTrack}
+          onNextClick={toNextTrack}
+          onPlayPauseClick={setPlaying}
+        />
       </div>
     </div>
   );
