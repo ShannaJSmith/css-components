@@ -16,11 +16,19 @@ const AudioPlayer = ({ tracks }) => {
   const { duration } = audioRef.current;
 
   const toPrevTrack = () => {
-    console.log('go to prev');
+    if (trackIndex - 1 < 0) {
+      setTrackIndex(tracks.length - 1);
+    } else {
+      setTrackIndex(trackIndex - 1);
+    }
   };
 
   const toNextTrack = () => {
-    console.log('go to next');
+    if (trackIndex < tracks.length - 1) {
+      setTrackIndex(trackIndex + 1);
+    } else {
+      setTrackIndex(0);
+    }
   };
 
   return (
