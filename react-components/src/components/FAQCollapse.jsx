@@ -1,13 +1,11 @@
 import './FAQCollapse.css';
 import { BsChevronDown } from 'react-icons/bs';
 import { RiCloseFill } from 'react-icons/ri';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const FAQCollapse = () => {
   return (
     <>
       <h1>Frequently Asked Questions</h1>
-      <FontAwesomeIcon icon="comment" />
       <div className="faq-container">
         <div className="faq active">
           <h3 className="faq-question">What's your favourite anime?</h3>
