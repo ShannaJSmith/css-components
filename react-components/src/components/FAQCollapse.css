@@ -19,3 +19,9 @@
   background-color: rgba(196, 188, 188, 0.884);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 3px 6px rgba(0, 0, 0, 0.1);
 }
+
+.faq.active::before,
+.faq.active::after {
+  content: 'Hello';
+  color: pink;
+}
