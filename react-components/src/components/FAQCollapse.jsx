@@ -2,48 +2,26 @@ import './FAQCollapse.css';
 import { BsChevronDown } from 'react-icons/bs';
 import { RiCloseFill } from 'react-icons/ri';
 import { FaRegComment } from 'react-icons/fa';
+import { faqData } from '../faqData';
 
 const FAQCollapse = () => {
-  const toggles = document.querySelectorAll('.faq-toggle');
-
-  toggles.forEach((toggle) => {
-    // for each toggle button
-    console.log('toggle', toggle);
-
-    toggle.addEventListener('click', () => {
-      toggle.parentNode.className.toggle('active');
-    });
-    // console.log('parent', toggle.parentNode.className);
-  });
-
   return (
     <>
       <h1>Frequently Asked Questions</h1>
       <div className="faq-container">
-        <div className="faq active">
-          <FaRegComment className="comment-icon-before" />
-          <h3 className="faq-question">What's your favourite anime?</h3>
-          <p className="faq-answer">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam
-            exercitationem ut culpa nesciunt nihil est quaerat repellat
-            veritatis ullam illo, tenetur labore! Unde nihil magnam animi totam
-            similique rerum veniam cumque consequatur! In animi voluptates
-            temporibus praesentium ut magnam, quaerat aspernatur alias natus
-            veritatis tenetur ipsam dolor nemo laudantium ad atque cumque
-            dolorum fugiat voluptatum odio, enim dolorem saepe commodi
-            consequuntur? Reprehenderit commodi ab soluta consectetur. Voluptas
-            nam atque veritatis porro possimus delectus, expedita iusto eaque?
-            Necessitatibus dolor, ipsa iure, saepe nobis eveniet accusamus hic
-            veritatis ad minus dicta repellendus nihil? Quo voluptates
-            voluptatibus iusto nobis quia maiores quos aspernatur!
-          </p>
-          <button className="faq-toggle">
-            <BsChevronDown className="down-arrow" />
-            <RiCloseFill className="close-icon" />
-          </button>
-          <FaRegComment className="comment-icon-after" />
-        </div>
-        <div className="faq">
+        {faqData.map((data) => (
+          <div className="faq active" key={data.id}>
+            <FaRegComment className="comment-icon-before" />
+            <h3 className="faq-question">{data.question}</h3>
+            <p className="faq-answer">{data.answer}</p>
+            <button className="faq-toggle">
+              <BsChevronDown className="down-arrow" />
+              <RiCloseFill className="close-icon" />
+            </button>
+            <FaRegComment className="comment-icon-after" />
+          </div>
+        ))}
+        {/* <div className="faq">
           <h3 className="faq-question">Why is it your favourite anime?</h3>
           <p className="faq-answer">Probably because of nostalgia.</p>
           <button className="faq-toggle">
@@ -78,7 +56,7 @@ const FAQCollapse = () => {
             <BsChevronDown className="down-arrow" />
             <RiCloseFill className="close-icon" />
           </button>
-        </div>
+        </div> */}
       </div>
     </>
   );
