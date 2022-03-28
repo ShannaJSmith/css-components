@@ -6,12 +6,20 @@ import { useState } from 'react';
 
 const FAQCollapse = () => {
   const [active, setActive] = useState(false);
-  const toggleClass = () => {};
+
+  const toggleClass = () => {
+    setActive(true);
+  };
+
+  const handleClose = () => {
+    setActive(false);
+  };
+
   return (
     <>
       <h1>Frequently Asked Questions</h1>
       <div className="faq-container">
-        <div className="faq active">
+        <div className={active ? 'faq active' : 'faq'}>
           <FaRegComment className="comment-icon-before" />
           <h3 className="faq-question">What's your favourite anime?</h3>
           <p className="faq-answer">
@@ -30,7 +38,7 @@ const FAQCollapse = () => {
           </p>
           <button className="faq-toggle">
             <BsChevronDown className="down-arrow" onClick={toggleClass} />
-            <RiCloseFill className="close-icon" />
+            <RiCloseFill className="close-icon" onClick={handleClose} />
           </button>
           <FaRegComment className="comment-icon-after" />
         </div>
