@@ -7,11 +7,11 @@ import { useState } from 'react';
 const FAQCollapse = () => {
   const [active, setActive] = useState(false);
 
-  const toggleClass = () => {
+  const toggleOpen = () => {
     setActive(true);
   };
 
-  const handleClose = () => {
+  const toggleClose = () => {
     setActive(false);
   };
 
@@ -37,8 +37,8 @@ const FAQCollapse = () => {
             voluptatibus iusto nobis quia maiores quos aspernatur!
           </p>
           <button className="faq-toggle">
-            <BsChevronDown className="down-arrow" onClick={toggleClass} />
-            <RiCloseFill className="close-icon" onClick={handleClose} />
+            <BsChevronDown className="down-arrow" onClick={toggleOpen} />
+            <RiCloseFill className="close-icon" onClick={toggleClose} />
           </button>
           <FaRegComment className="comment-icon-after" />
         </div>
