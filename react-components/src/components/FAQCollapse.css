@@ -50,6 +50,13 @@
   transform: rotateY(180deg);
 }
 
+/* .faq .comment-icon-before {
+  display: none;
+}
+.faq .comment-icon-after {
+  display: none;
+} */
+
 .faq-question {
   margin: 0 35px 0 0;
 }
