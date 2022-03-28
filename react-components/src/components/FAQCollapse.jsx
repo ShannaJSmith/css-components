@@ -26,8 +26,8 @@ const FAQCollapse = () => {
             voluptatibus iusto nobis quia maiores quos aspernatur!
           </p>
           <button className="faq-toggle">
-            <BsChevronDown />
-            <RiCloseFill />
+            <BsChevronDown className="down-arrow" />
+            <RiCloseFill className="close-icon" />
           </button>
           <FaRegComment className="comment-icon-after" />
         </div>
@@ -35,16 +35,16 @@ const FAQCollapse = () => {
           <h3 className="faq-question">Why is it your favourite anime?</h3>
           <p className="faq-answer">Probably because of nostalgia.</p>
           <button className="faq-toggle">
-            <BsChevronDown />
-            <RiCloseFill />
+            <BsChevronDown className="down-arrow" />
+            <RiCloseFill className="close-icon" />
           </button>
         </div>
         <div className="faq">
           <h3 className="faq-question">Who is your favourite character?</h3>
           <p className="faq-answer">Sesshomaru-sama!</p>
           <button className="faq-toggle">
-            <BsChevronDown />
-            <RiCloseFill />
+            <BsChevronDown className="down-arrow" />
+            <RiCloseFill className="close-icon" />
           </button>
         </div>
         <div className="faq">
@@ -53,8 +53,8 @@ const FAQCollapse = () => {
             Fantasy/Supernatural. And romance is nice.
           </p>
           <button className="faq-toggle">
-            <BsChevronDown />
-            <RiCloseFill />
+            <BsChevronDown className="down-arrow" />
+            <RiCloseFill className="close-icon" />
           </button>
         </div>
         <div className="faq">
@@ -63,8 +63,8 @@ const FAQCollapse = () => {
           </h3>
           <p className="faq-answer">Japan. Always Japan.</p>
           <button className="faq-toggle">
-            <BsChevronDown />
-            <RiCloseFill />
+            <BsChevronDown className="down-arrow" />
+            <RiCloseFill className="close-icon" />
           </button>
         </div>
       </div>
