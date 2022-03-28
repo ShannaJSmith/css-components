@@ -1,6 +1,7 @@
 import './FAQCollapse.css';
 import { BsChevronDown } from 'react-icons/bs';
 import { RiCloseFill } from 'react-icons/ri';
+import { FaRegComment } from 'react-icons/fa';
 
 const FAQCollapse = () => {
   return (
@@ -8,6 +9,7 @@ const FAQCollapse = () => {
       <h1>Frequently Asked Questions</h1>
       <div className="faq-container">
         <div className="faq active">
+          <FaRegComment />
           <h3 className="faq-question">What's your favourite anime?</h3>
           <p className="faq-answer">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam
