@@ -20,8 +20,10 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 3px 6px rgba(0, 0, 0, 0.1);
 }
 
-.faq.active::before,
+/* .faq.active::before,
 .faq.active::after {
-  content: 'Hello';
-  color: pink;
-}
+  font-family: 'Font Awesome 5';
+  font-weight: 900;
+  color: #bada55;
+  content: '\f075';
+} */
