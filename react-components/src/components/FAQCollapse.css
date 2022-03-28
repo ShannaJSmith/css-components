@@ -86,3 +86,7 @@
 .faq.active .faq-toggle .close-icon {
   display: block;
 }
+
+.faq.active .faq-toggle .down-arrow {
+  display: none;
+}
