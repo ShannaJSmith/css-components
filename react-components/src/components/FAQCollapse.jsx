@@ -2,8 +2,11 @@ import './FAQCollapse.css';
 import { BsChevronDown } from 'react-icons/bs';
 import { RiCloseFill } from 'react-icons/ri';
 import { FaRegComment } from 'react-icons/fa';
+import { useState } from 'react';
 
 const FAQCollapse = () => {
+  const [active, setActive] = useState(false);
+  const toggleClass = () => {};
   return (
     <>
       <h1>Frequently Asked Questions</h1>
@@ -26,7 +29,7 @@ const FAQCollapse = () => {
             voluptatibus iusto nobis quia maiores quos aspernatur!
           </p>
           <button className="faq-toggle">
-            <BsChevronDown className="down-arrow" />
+            <BsChevronDown className="down-arrow" onClick={toggleClass} />
             <RiCloseFill className="close-icon" />
           </button>
           <FaRegComment className="comment-icon-after" />
