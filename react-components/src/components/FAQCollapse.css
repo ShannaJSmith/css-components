@@ -66,6 +66,7 @@
 .faq-toggle {
   background-color: transparent;
   border: 0;
+  border-radius: 50%;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -85,8 +86,13 @@
 
 .faq.active .faq-toggle .close-icon {
   display: block;
+  color: white;
 }
 
 .faq.active .faq-toggle .down-arrow {
   display: none;
+}
+
+.faq.active .faq-toggle {
+  background-color: rgb(153, 149, 149);
 }
