@@ -2,24 +2,25 @@ import './FAQCollapse.css';
 import { BsChevronDown } from 'react-icons/bs';
 import { RiCloseFill } from 'react-icons/ri';
 import { FaRegComment } from 'react-icons/fa';
-import { useState } from 'react';
 
 const FAQCollapse = () => {
-  const [active, setActive] = useState(false);
+  const toggles = document.querySelectorAll('.faq-toggle');
 
-  const toggleOpen = () => {
-    setActive(true);
-  };
+  toggles.forEach((toggle) => {
+    // for each toggle button
+    console.log('toggle', toggle);
 
-  const toggleClose = () => {
-    setActive(false);
-  };
+    toggle.addEventListener('click', () => {
+      toggle.parentNode.className.toggle('active');
+    });
+    // console.log('parent', toggle.parentNode.className);
+  });
 
   return (
     <>
       <h1>Frequently Asked Questions</h1>
       <div className="faq-container">
-        <div className={active ? 'faq active' : 'faq'}>
+        <div className="faq active">
           <FaRegComment className="comment-icon-before" />
           <h3 className="faq-question">What's your favourite anime?</h3>
           <p className="faq-answer">
@@ -37,8 +38,8 @@ const FAQCollapse = () => {
             voluptatibus iusto nobis quia maiores quos aspernatur!
           </p>
           <button className="faq-toggle">
-            <BsChevronDown className="down-arrow" onClick={toggleOpen} />
-            <RiCloseFill className="close-icon" onClick={toggleClose} />
+            <BsChevronDown className="down-arrow" />
+            <RiCloseFill className="close-icon" />
           </button>
           <FaRegComment className="comment-icon-after" />
         </div>
