@@ -9,7 +9,7 @@ const FAQCollapse = () => {
       <h1>Frequently Asked Questions</h1>
       <div className="faq-container">
         <div className="faq active">
-          <FaRegComment />
+          <FaRegComment className="comment-icon-before" />
           <h3 className="faq-question">What's your favourite anime?</h3>
           <p className="faq-answer">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam
@@ -29,6 +29,7 @@ const FAQCollapse = () => {
             <BsChevronDown />
             <RiCloseFill />
           </button>
+          <FaRegComment className="comment-icon-after" />
         </div>
         <div className="faq">
           <h3 className="faq-question">Why is it your favourite anime?</h3>
