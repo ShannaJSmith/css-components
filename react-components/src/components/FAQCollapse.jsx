@@ -6,27 +6,32 @@ import { faqData } from '../faqData';
 import { useState } from 'react';
 
 const FAQCollapse = () => {
-  const [data, setData] = useState(faqData);
-  const [active, setActive] = useState(false);
-  console.log('data', data);
+  const [data, setData] = useState({
+    faqData: faqData,
+    active: null,
+  });
+
+  const toggleClass = (index) => {
+    setData({ ...data, active: data.faqData[index] });
+  };
 
   return (
     <>
       <h1>Frequently Asked Questions</h1>
       <div className="faq-container">
-        {data.map((d) => (
-          <div className={active ? 'faq active' : 'faq'} key={d.id}>
+        {data.faqData.map((d, index) => (
+          <div className="faq active" key={index}>
             <FaRegComment className="comment-icon-before" />
             <h3 className="faq-question">{d.question}</h3>
             <p className="faq-answer">{d.answer}</p>
             <button className="faq-toggle">
               <BsChevronDown
                 className="down-arrow"
-                onClick={() => setActive(!active)}
+                onClick={() => toggleClass(index)}
               />
               <RiCloseFill
                 className="close-icon"
-                onClick={() => setActive(active)}
+                onClick={() => toggleClass(index)}
               />
             </button>
             <FaRegComment className="comment-icon-after" />
