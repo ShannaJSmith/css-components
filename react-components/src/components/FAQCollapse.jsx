@@ -11,8 +11,17 @@ const FAQCollapse = () => {
     active: null,
   });
 
-  const toggleClass = (index) => {
+  const toggleActive = (index) => {
     setData({ ...data, active: data.faqData[index] });
+  };
+
+  const toggleClass = (index) => {
+    let qaItem = data.faqData[index];
+    if (qaItem === data.faqData) {
+      return 'faq active';
+    } else {
+      return 'faq';
+    }
   };
 
   return (
@@ -20,18 +29,18 @@ const FAQCollapse = () => {
       <h1>Frequently Asked Questions</h1>
       <div className="faq-container">
         {data.faqData.map((d, index) => (
-          <div className="faq active" key={index}>
+          <div className={toggleClass(index)} key={index}>
             <FaRegComment className="comment-icon-before" />
             <h3 className="faq-question">{d.question}</h3>
             <p className="faq-answer">{d.answer}</p>
             <button className="faq-toggle">
               <BsChevronDown
                 className="down-arrow"
-                onClick={() => toggleClass(index)}
+                onClick={() => toggleActive(index)}
               />
               <RiCloseFill
                 className="close-icon"
-                onClick={() => toggleClass(index)}
+                onClick={() => toggleActive(index)}
               />
             </button>
             <FaRegComment className="comment-icon-after" />
