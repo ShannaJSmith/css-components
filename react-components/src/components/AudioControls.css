@@ -1,0 +1,32 @@
+.audio-controls button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: white;
+}
+
+.audio-controls button:hover {
+  color: #bada55;
+}
+
+.audio-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 75%;
+  margin: 0 auto 15px;
+}
+
+.audio-controls .prev,
+.audio-controls .next {
+  font-size: 24px;
+}
+
+.audio-controls .play,
+.audio-controls .pause {
+  font-size: 50px;
+}
+/*# sourceMappingURL=AudioControls.css.map */

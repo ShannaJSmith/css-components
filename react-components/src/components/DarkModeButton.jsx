@@ -1,5 +1,5 @@
 import { BsMoonStarsFill, BsFillSunFill } from 'react-icons/bs';
-import './DarkModeButton.css';
+import './DarkModeButton.scss';
 
 const DarkModeButton = () => {
   return (
