@@ -1,8 +1,8 @@
-# Built using Create React App
+## Built using Create React App
 
 A project featuring seperate react components across multiple pages.
 
-Guide from 50 Projects in 50 Days - HTML, CSS, and JavaScript by
+Guide used for some components: 50 Projects in 50 Days - HTML, CSS, and JavaScript by
 Brad Traversy and Florin Pop
 
 ## Dependencies
