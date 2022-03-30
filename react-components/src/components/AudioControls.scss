@@ -1,12 +1,13 @@
-.audio-controls > button {
-  border: none;
-  background: none;
-  cursor: pointer;
-  color: white;
-}
-
-.audio-controls > button:hover {
-  color: #bada55;
+.audio-controls {
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: white;
+    &:hover {
+      color: #bada55;
+    }
+  }
 }
 
 .audio-controls {
