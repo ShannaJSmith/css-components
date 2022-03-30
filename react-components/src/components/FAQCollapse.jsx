@@ -17,7 +17,7 @@ const FAQCollapse = () => {
 
   const toggleClass = (index) => {
     let qaItem = data.faqData[index];
-    if (qaItem === data.faqData) {
+    if (data.active === qaItem) {
       return 'faq active';
     } else {
       return 'faq';
@@ -29,7 +29,7 @@ const FAQCollapse = () => {
       <h1>Frequently Asked Questions</h1>
       <div className="faq-container">
         {data.faqData.map((d, index) => (
-          <div className="faq active" key={index}>
+          <div className={toggleClass(index)} key={index}>
             <FaRegComment className="comment-icon-before" />
             <h3 className="faq-question">{d.question}</h3>
             <p className="faq-answer">{d.answer}</p>
