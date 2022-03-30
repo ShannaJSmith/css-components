@@ -2,7 +2,8 @@
 
 A project featuring seperate react components across multiple pages.
 
-Guide used for some components: 50 Projects in 50 Days - HTML, CSS, and JavaScript by
+ExpandingCards, FAQCollapse, SoundBoard and HiddenSearchForm use a guide from
+50 Projects in 50 Days - HTML, CSS, and JavaScript by
 Brad Traversy and Florin Pop
 
 ## Dependencies
