@@ -1,4 +1,4 @@
-import './AudioControls.css';
+import './AudioControls.scss';
 
 import { BsSkipBackward, BsSkipForward, BsPlay, BsPause } from 'react-icons/bs';
 

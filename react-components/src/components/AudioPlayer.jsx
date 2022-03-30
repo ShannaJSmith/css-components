@@ -1,4 +1,4 @@
-import './AudioPlayer.css';
+import './AudioPlayer.scss';
 import AudioControls from './AudioControls';
 import { useState, useEffect, useRef } from 'react';
 
