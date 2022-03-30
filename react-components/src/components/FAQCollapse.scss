@@ -28,6 +28,14 @@
   content: '\f075';
 } */
 
+.comment-icon-before {
+  opacity: 0;
+}
+
+.comment-icon-after {
+  opacity: 0;
+}
+
 /* custom made icon with two comment imgs. Could also just import the existing duo icon */
 .faq.active {
   .comment-icon-before {

@@ -29,7 +29,7 @@ const FAQCollapse = () => {
       <h1>Frequently Asked Questions</h1>
       <div className="faq-container">
         {data.faqData.map((d, index) => (
-          <div className={toggleClass(index)} key={index}>
+          <div className="faq active" key={index}>
             <FaRegComment className="comment-icon-before" />
             <h3 className="faq-question">{d.question}</h3>
             <p className="faq-answer">{d.answer}</p>
