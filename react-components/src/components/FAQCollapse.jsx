@@ -40,7 +40,7 @@ const FAQCollapse = () => {
               />
               <RiCloseFill
                 className="close-icon"
-                onClick={() => toggleActive(index)}
+                onClick={() => toggleActive(!index)}
               />
             </button>
             <FaRegComment className="comment-icon-after" />
