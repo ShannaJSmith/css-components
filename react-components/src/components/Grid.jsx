@@ -1,5 +1,5 @@
 import { Button } from 'react-bootstrap';
-import './Grid.css';
+import './Grid.scss';
 
 const Grid = () => {
   return (

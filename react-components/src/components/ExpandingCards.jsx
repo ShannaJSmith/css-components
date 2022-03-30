@@ -1,4 +1,4 @@
-import './ExpandingCards.css';
+import './ExpandingCards.scss';
 import { panelData } from '../panelData';
 
 const ExpandingCards = () => {

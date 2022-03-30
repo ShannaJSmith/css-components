@@ -1,0 +1,116 @@
+.faq-container {
+  max-width: 600px;
+  text-align: left;
+  color: black;
+}
+
+.faq {
+  background-color: transparent;
+  border: 1px solid #9fa4a8;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 30px;
+  position: relative;
+  overflow: hidden; /* so nothing spills out of container */
+  transition: 0.3s ease; /* smooth transtion on expand and collapse */
+}
+
+.faq.active {
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* .faq.active::before,
+.faq.active::after {
+  font-family: 'Font Awesome 5';
+  font-weight: 900;
+  color: #bada55;
+  content: '\f075';
+} */
+
+/* custom made icon with two comment imgs. Could also just import the existing duo icon */
+.faq.active {
+  .comment-icon-before {
+    color: #bada55;
+    font-size: 7rem;
+    position: absolute;
+    opacity: 0.2;
+    top: 20px;
+    left: 20px;
+    z-index: 0; /* places icon behind everything */
+  }
+}
+
+.faq.active {
+  .comment-icon-after {
+    color: teal;
+    font-size: 7rem;
+    position: absolute;
+    opacity: 0.2;
+    top: -10px;
+    left: -30px;
+    z-index: 0;
+    transform: rotateY(180deg);
+  }
+}
+
+.faq-question {
+  margin: 0 35px 0 0;
+}
+
+.faq-answer {
+  display: none;
+  margin: 30px 0 0;
+}
+
+.faq.active {
+  .faq-answer {
+    display: block;
+  }
+}
+
+.faq-toggle {
+  background-color: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 0;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 30px;
+  width: 30px;
+}
+
+.faq-toggle {
+  .close-icon {
+    display: none;
+  }
+}
+
+.faq.active {
+  .faq-toggle {
+    .close-icon {
+      display: block;
+      color: white;
+    }
+  }
+}
+
+.faq.active {
+  .faq-toggle {
+    .down-arrow {
+      display: block;
+    }
+  }
+}
+
+.faq.active {
+  .faq-toggle {
+    background-color: rgb(153, 149, 149);
+  }
+}

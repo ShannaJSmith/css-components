@@ -1,12 +1,10 @@
+$animeTitle: rgb(20, 209, 209);
+
 .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   color: #fff;
   width: 90vw;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .panel {
@@ -18,41 +16,37 @@
   border-radius: 50px;
   cursor: pointer;
   /* set initial width, will change on active later */
-  -webkit-box-flex: 0.1;
-      -ms-flex: 0.1;
-          flex: 0.1;
+  flex: 0.1;
   margin: 5px;
   /* h3 elements will be absolute*/
   position: relative;
   /* set ease in effect transition on flex property for when it's active later */
-  -webkit-transition: -webkit-box-flex 0.6s ease-in;
-  transition: -webkit-box-flex 0.6s ease-in;
   transition: flex 0.6s ease-in;
-  transition: flex 0.6s ease-in, -webkit-box-flex 0.6s ease-in, -ms-flex 0.6s ease-in;
 }
 
-.panel h3 {
-  color: #14d1d1;
-  font-size: 18px;
-  position: absolute;
-  bottom: 20px;
-  left: 15px;
-  margin: 0;
-  /* headings will initally be invisible. On active will change opacity*/
-  opacity: 0;
+.panel {
+  h3 {
+    color: $animeTitle;
+    font-size: 18px;
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    margin: 0;
+    /* headings will initally be invisible. On active will change opacity*/
+    opacity: 0;
+  }
 }
 
 .panel.active {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  flex: 2;
 }
 
-.panel.active h3 {
-  opacity: 1;
-  /* delay h3 appearing so it looks smoother */
-  -webkit-transition: opacity 0.3s ease-in 0.4s;
-  transition: opacity 0.3s ease-in 0.4s;
+.panel.active {
+  h3 {
+    opacity: 1;
+    /* delay h3 appearing so it looks smoother */
+    transition: opacity 0.3s ease-in 0.4s;
+  }
 }
 
 /* on small screens we see 2 panels */
@@ -60,6 +54,7 @@
   .container {
     width: 100vw;
   }
+
   .panel:nth-of-type(3),
   .panel:nth-of-type(4),
   .panel:nth-of-type(5) {
@@ -72,9 +67,9 @@
   .container {
     width: 100vw;
   }
+
   .panel:nth-of-type(4),
   .panel:nth-of-type(5) {
     display: none;
   }
 }
-/*# sourceMappingURL=ExpandingCards.css.map */

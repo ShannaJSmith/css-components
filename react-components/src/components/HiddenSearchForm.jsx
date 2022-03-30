@@ -1,4 +1,4 @@
-import './HiddenSearchForm.css';
+import './HiddenSearchForm.scss';
 import { BsSearch } from 'react-icons/bs';
 import { Button } from 'react-bootstrap';
 import { useState } from 'react';

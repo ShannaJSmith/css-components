@@ -10,6 +10,7 @@
   padding: 15px;
   height: 50px;
   width: 50px;
+  -webkit-transition: width 0.3s ease;
   transition: width 0.3s ease;
   border-radius: 0.3rem;
 }
@@ -21,7 +22,10 @@
   /* top: 0;
   left: 0; */
   width: 50px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .search.active .input {
@@ -30,5 +34,7 @@
 
 /* move button right on the x axis */
 .search.active .search-btn {
-  transform: translateX(60px);
+  -webkit-transform: translateX(60px);
+          transform: translateX(60px);
 }
+/*# sourceMappingURL=HiddenSearchForm.css.map */

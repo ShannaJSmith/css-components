@@ -1,4 +1,4 @@
-import './SoundBoard.css';
+import './SoundBoard.scss';
 import toriNoUta from '../sounds/Tori-no-Uta.mp3';
 import TGCF from '../sounds/TGCF-OST.mp3';
 import useSound from 'use-sound';

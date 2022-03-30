@@ -1,4 +1,4 @@
-import './Grid2.css';
+import './Grid2.scss';
 
 const Grid2 = () => {
   return (

@@ -1,4 +1,4 @@
-import './FAQCollapse.css';
+import './FAQCollapse.scss';
 import { BsChevronDown } from 'react-icons/bs';
 import { RiCloseFill } from 'react-icons/ri';
 import { FaRegComment } from 'react-icons/fa';
