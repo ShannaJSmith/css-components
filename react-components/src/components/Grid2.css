@@ -1,0 +1,13 @@
+.parent2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[6];
+      grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  width: 250px;
+  margin: auto;
+}
+/*# sourceMappingURL=Grid2.css.map */
