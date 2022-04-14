@@ -1,5 +1,7 @@
 import React from 'react';
 import './ImageCarousel.scss';
+import { IoIosArrowDropleft, IoIosArrowDropright } from 'react-icons';
+
 const ImageCarousel = () => {
   return (
     <div className="carousel">
@@ -25,7 +27,10 @@ const ImageCarousel = () => {
           alt="image-5"
         />
       </div>
-      <div className="buttons-container"></div>
+      <div className="buttons-container">
+        <IoIosArrowDropleft id="left" />
+        <IoIosArrowDropright id="right" />
+      </div>
     </div>
   );
 };
