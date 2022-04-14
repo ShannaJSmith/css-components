@@ -5,6 +5,7 @@ import Background2 from './pages/Background2';
 import CardsPage from './pages/CardsPage';
 import BGM from './pages/BGM';
 import FAQ from './pages/FAQ';
+import Carousel from './pages/Carousel';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/cards" component={CardsPage} />
         <Route path="/bgm" component={BGM} />
         <Route path="/faq" component={FAQ} />
+        <Route path="/carousel" component={Carousel} />
       </div>
     </Router>
   );

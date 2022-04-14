@@ -31,6 +31,11 @@ const TableOfContents = () => {
           FAQ Collapse
         </Button>
       </Link>
+      <Link to="/carousel">
+        <Button variant="secondary" className="col-7">
+          Carousel
+        </Button>
+      </Link>
     </div>
   );
 };
