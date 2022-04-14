@@ -23,6 +23,23 @@ const ImageCarousel = () => {
       imgs.style.transform = `translateX(${-index * 800}px)`;
     };
     let interval = setInterval(run, 2000);
+
+    const resetInterval = () => {
+      clearInterval(interval);
+      interval = setInterval(run, 2000);
+    };
+
+    rightButton.addEventListener('click', () => {
+      index++;
+      changeImage();
+      resetInterval();
+    });
+
+    leftButton.addEventListener('click', () => {
+      index--;
+      changeImage();
+      resetInterval();
+    });
   }, []);
 
   return (
