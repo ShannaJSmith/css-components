@@ -28,8 +28,8 @@ const ImageCarousel = () => {
         />
       </div>
       <div className="buttons-container">
-        <IoIosArrowDropleft id="left" />
-        <IoIosArrowDropright id="right" />
+        <IoIosArrowDropleft id="left" className="arrow-btn" />
+        <IoIosArrowDropright id="right" className="arrow-btn" />
       </div>
     </div>
   );
