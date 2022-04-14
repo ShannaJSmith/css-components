@@ -1,6 +1,6 @@
 import React from 'react';
 import './ImageCarousel.scss';
-import { IoIosArrowDropleft, IoIosArrowDropright } from 'react-icons';
+import { IoIosArrowDropleft, IoIosArrowDropright } from 'react-icons/io';
 
 const ImageCarousel = () => {
   return (
