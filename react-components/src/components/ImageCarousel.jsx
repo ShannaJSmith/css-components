@@ -1,16 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './ImageCarousel.scss';
 import { IoIosArrowDropleft, IoIosArrowDropright } from 'react-icons/io';
 
 const ImageCarousel = () => {
-  // const imgs = document.getElementById('imgs');
-  // const leftButton = document.getElementById('left');
-  // const rightButton = document.getElementById('right');
+  useEffect(() => {
+    const imgs = document.getElementById('imgs');
+    const leftButton = document.getElementById('left');
+    const rightButton = document.getElementById('right');
+    const img = document.querySelectorAll('#imgs img');
+    let index = 0;
+    const run = () => {
+      index++;
+      changeImage();
+    };
 
-  // const img = document.querySelectorAll('#imgs img')
-
-  // let index = 0
-  // let interval =
+    const changeImage = () => {
+      if (index > img.length - 1) {
+        index = 0;
+      } else if (index < 0) {
+        index = img.length - 1;
+      }
+      imgs.style.transform = `translateX(${-index * 800}px)`;
+    };
+    let interval = setInterval(run, 2000);
+  }, []);
 
   return (
     <div className="carousel">
