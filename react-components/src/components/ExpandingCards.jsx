@@ -1,5 +1,5 @@
 import './ExpandingCards.scss';
-import { panelData } from '../panelData';
+import { panelData } from '../imageData';
 
 const ExpandingCards = () => {
   const panels = document.querySelectorAll('.panel');
