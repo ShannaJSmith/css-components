@@ -3,10 +3,10 @@ import './ImageCarousel.scss';
 import { IoIosArrowDropleft, IoIosArrowDropright } from 'react-icons/io';
 
 const ImageCarousel = () => {
+  // TODO refactor using hooks
+
   useEffect(() => {
     const imgs = document.getElementById('imgs');
-    const leftButton = document.getElementById('left');
-    const rightButton = document.getElementById('right');
     const img = document.querySelectorAll('#imgs img');
     let index = 0;
     const run = () => {
@@ -29,17 +29,17 @@ const ImageCarousel = () => {
       interval = setInterval(run, 2000);
     };
 
-    rightButton.addEventListener('click', () => {
+    const handleRightClick = () => {
       index++;
       changeImage();
       resetInterval();
-    });
+    };
 
-    leftButton.addEventListener('click', () => {
-      index--;
+    const handleLeftClick = () => {
+      index++;
       changeImage();
       resetInterval();
-    });
+    };
   }, []);
 
   return (
@@ -67,8 +67,8 @@ const ImageCarousel = () => {
         />
       </div>
       <div className="buttons-container">
-        <IoIosArrowDropleft id="left" className="arrow-btn" />
-        <IoIosArrowDropright id="right" className="arrow-btn" />
+        <IoIosArrowDropleft className="arrow-btn" onClick={handleLeftClick} />
+        <IoIosArrowDropright className="arrow-btn" onClick={handleRightClick} />
       </div>
     </div>
   );
